@@ -1,5 +1,5 @@
 // Topic : Longest Prefix which is equal to Suffix
-// LSP Table
+// LCP Table
 // Used in KMP alogorithm for string Matching
 
 // For More Info and Images Refer here :

@@ -3,11 +3,18 @@ public:
     // Parent store the parent of the index
     // rank store the number of child it has  
     vector<int> parent, rank;
+    int R, C;
     
     // Initialize parent , rank
     UF(int N){
         parent.resize(N,-1);
         rank.resize(N,1);
+    }
+    
+    // 2D DS
+    UF(int R, int C){
+        this->R = R;
+        this->C = C;
     }
     
     // Find the parent of the element
@@ -18,6 +25,9 @@ public:
         // change all it's path element to its parent (Reduce the time complexity
         return (parent[child] = Find(parent[child]));
      
+    }
+    int getMark(int r, int c){
+        return r*C+c+1;
     }
     void Union(int x, int y){
         int p1 = Find(x);

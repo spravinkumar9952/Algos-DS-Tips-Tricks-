@@ -1,5 +1,5 @@
 // TC: O(N)
-// TC: O(1)
+// SC: O(1)
 
 int mod = 1e9 + 7;
 

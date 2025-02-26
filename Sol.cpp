@@ -4,7 +4,7 @@
 int mod = 1e9 + 7;
 
 int solve(string &s){
-    int mp[26];
+    int mp[26] = {0};
     int dist = 0, N = s.size(), ans = 0;
     for(char c : s){
         mp[c-'a']++;

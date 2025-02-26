@@ -1,10 +1,11 @@
 // TC: O(N)
 // TC: O(1)
 
+int mod = 1e9 + 7;
+
 int solve(string &s){
     int mp[26];
     int dist = 0, N = s.size(), ans = 0;
-    
     for(char c : s){
         mp[c-'a']++;
         if(mp[c-'a'] == 1) dist++;
@@ -19,7 +20,7 @@ int solve(string &s){
         }
 
         if(dist <= 2){
-            ans += N-j+1;
+            ans = (ans + N-j+1) % mod;
         }
   
         mp[s[i] -'a']++;
@@ -36,4 +37,3 @@ int main(){
     string s = "aaaaaaaaaaabbbbb";
     cout << "Ans " << solve(s);
 }
-
